@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Button from '../../components/Button';
-import TextInput from '../../components/TextImput';
-import styles from '../Login/style';
+import React, { useState } from "react";
+import { View, Text, StyleSheet } from "react-native";
+import Button from "../../components/Button";
+import TextInput from "../../components/TextInput";
+import styles from "../Login/style";
+import { useNavigation } from "@react-navigation/native";
+import Home from "../Home";
 
-
-
-const Login: React.FC = ({ navigation }) => {  
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
+const Login = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const navigator = useNavigation();
+  
   const handleLogin = () => {
     console.log(email);
     console.log(password);
-        
-    navigation.navigate('Home');
+    navigator.navigate("Home")
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
-      <TextInput
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-      />      
+      <TextInput placeholder="Email" value={email} onChangeText={setEmail} />
       <TextInput
         placeholder="Password"
         value={password}

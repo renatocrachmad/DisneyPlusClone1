@@ -1,6 +1,6 @@
-import React from 'react';
-import { TextInput as RNTextInput, StyleSheet } from 'react-native';
-import styles from '../styles/TextInputStyle';
+import React from "react";
+import { TextInput as RNTextInput, StyleSheet } from "react-native";
+import styles from "./style";
 
 interface TextInputProps {
   placeholder: string;
@@ -9,7 +9,12 @@ interface TextInputProps {
   onChangeText: (text: string) => void;
 }
 
-const TextInput: React.FC<TextInputProps> = ({ placeholder, secureTextEntry, value, onChangeText }) => {
+const TextInput = ({
+  placeholder,
+  secureTextEntry,
+  value,
+  onChangeText,
+}: TextInputProps) => {
   return (
     <RNTextInput
       style={styles.input}

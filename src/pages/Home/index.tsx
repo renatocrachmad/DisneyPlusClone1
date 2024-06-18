@@ -4,7 +4,7 @@ import styles from '../Home/style';
 
 
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Bem-vindo ao Disney Plus!</Text>

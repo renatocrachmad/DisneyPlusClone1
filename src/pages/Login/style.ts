@@ -5,8 +5,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#FFE4C4',
+    backgroundColor: '#87CEEB',
   },
+  
+
   title: {
     fontSize: 24,
     marginBottom: 20,

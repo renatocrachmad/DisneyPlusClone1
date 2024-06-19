@@ -4,6 +4,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 
+export type RootStackParamsList ={
+  Login: undefined;
+  Home: undefined;
+}
 const Stack = createStackNavigator();
 
 const Router = () => {

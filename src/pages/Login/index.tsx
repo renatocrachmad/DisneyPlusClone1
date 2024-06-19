@@ -5,11 +5,15 @@ import TextInput from "../../components/TextInput";
 import styles from "../Login/style";
 import { useNavigation } from "@react-navigation/native";
 import logo from "../../../assets/Disney+_logo.svg.png";
+import { NativeStackNavigationProp } from "react-native-screens/lib/typescript/native-stack/types";
+import { RootStackParamsList } from "../../routes";
+
+type screenProp = NativeStackNavigationProp<RootStackParamsList, 'Login'>;
 
 const Login = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const navigator = useNavigation();
+  const navigator = useNavigation <screenProp>();
 
   const handleLogin = () => {
     console.log(email);
